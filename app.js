@@ -3,9 +3,11 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const passport = require('passport');
+// const passportSetup = require('./config/passport-setup');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+// var usersRouter = require('./routes/users');
 
 var app = express();
 
@@ -19,6 +21,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+// app.set('view engine', 'html');
+// app.set('views', 'dist');
+
+
+//Passport
+app.use(passport.initialize());
 app.use('/', indexRouter);
 // app.use('/users', usersRouter);
 
@@ -45,7 +54,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.send('error');
 });
 
 module.exports = app;
