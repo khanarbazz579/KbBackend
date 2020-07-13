@@ -4,34 +4,34 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
 
-//   var todo = sequelize.define("User", {
-//     name: {
-//         type: DataTypes.STRING(191),
-//         allowNull: false
-//     },
-//     email : {
-//       type: DataTypes.STRING(191),
-//       allowNull : true
-//     },
-//     password :{
-//       type: DataTypes.STRING(191),
-//       allowNull : true
-//     },
-//     phone :{
-//       type: DataTypes.STRING(191),
-//       allowNull : true
-//     },
-//     password :{
-//       type: DataTypes.DATE,
-//       allowNull : true
-//     },
-//     created_at: {
-//         type: DataTypes.DATE
-//     },
-//     updated_at:{
-//       type: DataTypes.DATE      
-//     }
-// },{underscored: true});
+  var user = sequelize.define("User", {
+    name: {
+        type: DataTypes.STRING(191),
+        allowNull: false
+    },
+    email : {
+      type: DataTypes.STRING(191),
+      allowNull : true
+    },
+    password :{
+      type: DataTypes.STRING(191),
+      allowNull : true
+    },
+    phone :{
+      type: DataTypes.STRING(191),
+      allowNull : true
+    },
+    password :{
+      type: DataTypes.DATE,
+      allowNull : true
+    },
+    created_at: {
+        type: DataTypes.DATE
+    },
+    updated_at:{
+      type: DataTypes.DATE      
+    }
+},{underscored: true});
 
 
 
