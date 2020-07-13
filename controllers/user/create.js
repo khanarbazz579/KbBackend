@@ -5,7 +5,6 @@ const Users = require('../../models').User;
 const save = async function(req, res) {
 
     const body = req.body;
-    console.log("error >>>>>>>>>");
     if (!body.name) {
         return ReE(res, 'Please enter an name to register.');
     }
